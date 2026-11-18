@@ -1,17 +1,10 @@
-# capstone_jacaban
+# Book Borrowing Tracker
 
-A new Flutter project.
+**Name:** Anthony Jacaban
+**Workstation Number:** 11
 
-## Getting Started
+## Project Description
 
-This project is a starting point for a Flutter application.
+Book Borrowing Tracker is a Flutter mobile app that helps users manage borrowing books from a small library. Users can browse the list of available books, search for a book by title or author, and borrow or return a book with a single button. Each borrowed book shows its due date, which is 14 days after borrowing, and overdue books are highlighted in red. The app also includes a simple borrowing history screen that lists every book borrowed and when it was returned.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The book list is hardcoded with 10 sample books. The app does not include barcode scanning or an admin panel, so it stays simple and focused on the core borrowing features.
