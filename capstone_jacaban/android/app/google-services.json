@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "203057628211",
+    "project_id": "capstone-jacaban",
+    "storage_bucket": "capstone-jacaban.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203057628211:android:7b9cd623646d0ea4018f46",
+        "android_client_info": {
+          "package_name": "com.example.capstone_jacaban"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSs4p9D-YLfj1AbD7WuVHOy_YkSmy5qLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

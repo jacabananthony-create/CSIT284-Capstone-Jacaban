@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/library.dart';
 import '../widgets/book_card.dart';
+import 'book_form_screen.dart';
 import 'detail_screen.dart';
 import 'history_screen.dart';
 
@@ -28,6 +29,16 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: const Icon(Icons.add),
+        label: const Text('Add Book'),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => BookFormScreen(library: library),
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Padding(
@@ -45,6 +56,17 @@ class HomeScreen extends StatelessWidget {
             child: ListenableBuilder(
               listenable: library,
               builder: (context, _) {
+                if (library.isLoading) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                if (library.error != null) {
+                  return Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Text('Firebase error:\n${library.error}'),
+                    ),
+                  );
+                }
                 final books = library.filteredBooks;
                 if (books.isEmpty) {
                   return const Center(child: Text('No books found.'));
